@@ -40,3 +40,20 @@ body {
 .navbar a:hover {
     background-color: #333;
 }
+
+/*main*/
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+.intro {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.intro h2 {
+    color: #315c3a;
+}
