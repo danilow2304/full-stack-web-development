@@ -159,7 +159,7 @@ footer {
         font-size: 14px;
     }
 }
-#topBtn {
+#top {
     display: flex;
     justify-content: right;
 }
