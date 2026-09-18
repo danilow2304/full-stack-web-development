@@ -1,3 +1,14 @@
+#main-header {
+    background-color: #315c3a;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+
+#main-header h1 {
+    margin-bottom: 10px;
+}
+
 nav {
     display: flex;
     gap: 20px;
