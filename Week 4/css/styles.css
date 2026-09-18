@@ -11,6 +11,10 @@
     margin-bottom: 15px;
 }
 
+#main-header p {
+    font-size: 30 px;
+    color: #000000;
+}
 nav {
     display: flex;
     gap: 20px;
