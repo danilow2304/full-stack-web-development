@@ -148,6 +148,11 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+img {
+max-width: 100%;
+height: auto;
+}
+
 @media(max-width: 768px){
     .plant-container {
         grid-template-columns: 1fr;
