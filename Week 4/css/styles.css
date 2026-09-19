@@ -47,12 +47,12 @@ main {
 }
 
 h2 {
-    color: #39bb55;
+    color: #0f1210;
 }
 
 .plant-card h3 {
     margin-top: 0;
-    color: #101110;
+    color: #39bb55;
 }
 
 nav a:hover {
