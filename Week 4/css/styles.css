@@ -120,6 +120,16 @@ nav a:hover {
     border-radius: 10px;
 }
 
+.about-box {
+    background-color: #39bb55;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid #121111f7;
+    border-radius: 15px;
+    width: 80%;
+}
+
 @media(max-width: 768px){
     .plant-container {
         grid-template-columns: 1fr;
