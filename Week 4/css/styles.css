@@ -94,6 +94,30 @@ nav a:hover {
     color: white;
 }
 
+.featured-plant {
+    background-color: #39bb55;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid #121111f7;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.featured-plant h2 {
+    color: white;
+}
+
+.featured-plant p {
+    color: black;
+}
+
+.featured-plant img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
 @media(max-width: 768px){
     .plant-container {
         grid-template-columns: 1fr;
