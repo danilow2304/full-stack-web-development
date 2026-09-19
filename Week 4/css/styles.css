@@ -31,6 +31,11 @@ nav a {
     border-radius: 10px;
 }
 
+.plant-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .plant-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,7 +52,7 @@ h2 {
 
 .plant-card h3 {
     margin-top: 0;
-    color: #39bb55;
+    color: #101110;
 }
 
 nav a:hover {
