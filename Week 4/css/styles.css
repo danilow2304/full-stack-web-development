@@ -37,6 +37,23 @@ nav a {
     gap: 20px;
 }
 
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #39bb55;
+}
+
+.plant-card h3 {
+    margin-top: 0;
+    color: #39bb55;
+}
+
+nav a:hover {
+    color: #39bb55;
+}
+
 footer {
     background-color: #222;
     color: white;
