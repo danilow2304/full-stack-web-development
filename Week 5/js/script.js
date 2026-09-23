@@ -46,14 +46,25 @@ const movies = [
     runtime: 100,
     description: "The Saiyans are a warrior race that once ruled the universe. After being defeated by the tyrant Frieza, they were nearly wiped out. However, two Saiyans survived and were sent to Earth, where they were raised as humans. Now, a new threat emerges in the form of Broly, a powerful Saiyan with a mysterious past."
   }
-
-
 ];
 
+// Class variables for the filter inputs
+const searchInput = document.getElementById("search")
+const genreFilter = document.getElementById("genre-filter")
+const yearFilter = document.getElementById("year-filter")
+const resetButton = document.getElementById("reset-button")
+const movieCount = document.getElementById("movie-count")
+
 function displayMovies(movieList) {
-    const movieContainer = document.getElementById("movie-container");
-    movieContainer.innerHTML = "";
-    movieList.forEach(movie => {
+  const movieContainer = document.getElementById("movie-container");
+  movieContainer.innerHTML = "";
+
+  if(movieList.length === 0) {
+    movieContainer.innerHTML = "<p>No Movies found. Try a different search.</p>";
+    return;
+  }
+
+  movieList.forEach(movie => {
         const movieElement = document.createElement("div");
         movieElement.classList.add("movie");
         movieElement.innerHTML = `
@@ -69,4 +80,36 @@ function displayMovies(movieList) {
     });
 }
 
-displayMovies(movies);
+function filterMovies() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedGenre = genreFilter.value;
+    const selectedYear = yearFilter.value;
+
+    const filteredMovies = movies.filter(movie => {
+        const matchesSearch = movie.title.toLowerCase().includes(searchTerm);
+        const matchesGenre = selectedGenre === "all" || movie.genre === selectedGenre;
+        let matchesYear = true;
+
+        if(selectedYear === "1990"){
+          matchesYear = movie.releaseYear < 2000;
+        } else if (selectedYear === "2000"){
+          matchesYear = movie.releaseYear >= 2000;
+        }
+        
+        return matchesSearch && matchesGenre && matchesYear;
+    });
+
+    displayMovies(filteredMovies);
+    movieCount.textContent = `Showing: ${filteredMovies.length} movies`;
+}
+
+//event listeners for the filter inputs
+searchInput.addEventListener("input", filterMovies);
+genreFilter.addEventListener("change", filterMovies);
+yearFilter.addEventListener("change", filterMovies);
+resetButton.addEventListener("click", () => {
+    searchInput.value = "";
+    genreFilter.value = "all";
+    yearFilter.value = "all";
+    filterMovies();
+});
