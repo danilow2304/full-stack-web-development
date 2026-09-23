@@ -16,7 +16,7 @@ const movies = [
     releaseYear: 1995,
     rating: 8.3,
     runtime: 81,
-    description: "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room."
+    description: "A cowboy toy is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room."
   },
 
   {
