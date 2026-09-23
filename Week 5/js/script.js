@@ -36,7 +36,17 @@ const movies = [
     rating: 7.1,
     runtime: 117,
     description: "A hot-shot race-car named Lightning McQueen gets waylaid in Radiator Springs, where he finds the true meaning of friendship and family."
+  },
+  {
+    title: "Dragon Ball Super: Broly",
+    director: "Tatsuya Nagamine",
+    genre: "Animation, Action, Adventure",
+    releaseYear: 2018,
+    rating: 7.4,
+    runtime: 100,
+    description: "The Saiyans are a warrior race that once ruled the universe. After being defeated by the tyrant Frieza, they were nearly wiped out. However, two Saiyans survived and were sent to Earth, where they were raised as humans. Now, a new threat emerges in the form of Broly, a powerful Saiyan with a mysterious past."
   }
+
 
 ];
 
