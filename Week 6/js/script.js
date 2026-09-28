@@ -1,0 +1,58 @@
+const movies = [
+  {
+    title: "Resident Evil",
+    genre: "Action, Horror, Sci-Fi",
+    Year: 2002,
+    rating: 6.7,
+  },
+  {
+    title: "Toy Story",
+    genre: "Animation",
+    Year: 1995,
+    rating: 8.3,
+  },
+
+  {
+    title: "The Dark Knight",
+    director: "Christopher Nolan",
+    genre: "Action, Crime, Drama",
+    releaseYear: 2008,
+    rating: 9.0,
+    runtime: 152,
+    description: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+  },
+  {
+    title: "Cars",
+    director: "John Lasseter",
+    genre: "Animation, Adventure, Comedy",
+    releaseYear: 2006,
+    rating: 7.1,
+    runtime: 117,
+    description: "A hot-shot race-car named Lightning McQueen gets waylaid in Radiator Springs, where he finds the true meaning of friendship and family."
+  },
+  {
+    title: "Dragon Ball Super: Broly",
+    director: "Tatsuya Nagamine",
+    genre: "Animation, Action, Adventure",
+    releaseYear: 2018,
+    rating: 7.4,
+    runtime: 100,
+    description: "The Saiyans are a warrior race that once ruled the universe. After being defeated by the tyrant Frieza, they were nearly wiped out. However, two Saiyans survived and were sent to Earth, where they were raised as humans. Now, a new threat emerges in the form of Broly, a powerful Saiyan with a mysterious past."
+  }
+];
+
+function displayMovies(movieArray) {
+    const movieList = document.getElementById("movieList");
+    movieList.innerHTML = "";
+
+    movieArray.map((movie) => {
+
+        const movieList = document.createElement("div")
+        movieList.innerHTML += `
+            <div class="movie">
+              
+                
+        
+        `
+    })
+}
