@@ -51,8 +51,7 @@ function displayMovies(movieArray) {
         movieList.innerHTML += `
             <div class="movie">
               
-                
-        
+
         `
     })
 }
