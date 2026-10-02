@@ -73,7 +73,7 @@ function sortAlphabetically() {
     });
     displayMovies(sortedMovies);
 }
-
+//filter by genre
 function filterByGenre() {
     const genreInput = prompt("Enter a genre to filter by (e.g., Action, Drama, Animation):");
     if (genreInput) {
@@ -84,7 +84,7 @@ function filterByGenre() {
 
     displayMovies(filteredMovies);
 }
-
+//filter by year
 function filterByYear() {
     const yearInput = prompt("Enter a year to filter by (e.g., 1994, 2003):");
     if (!yearInput) {
@@ -95,8 +95,34 @@ function filterByYear() {
 
     displayMovies(filteredMovies);
 }
-
+//filter by rating
 function filterByRating() {
     const filteredRatedMovies = movies.filter((movie) => movie.rating >= 8);
     displayMovies(filteredRatedMovies);
+}
+
+//find specific movie
+function findMovie() {
+    const titleInput = prompt("Enter the title of the movie to find:");
+    const movieFound = movies.find((movie) => movie.title.toLowerCase() === titleInput.toLowerCase());
+    if (movieFound) {
+        displayMovies([movieFound]);
+    } else {
+        alert("Movie not found.");
+    }
+}
+
+//movie stats
+function movieStats() {
+    const totalRating = movies.reduce((total, movie) => {
+        return total + movie.rating;
+    }, 0);
+    const averageRating = (totalRating / movies.length).toFixed(2);
+
+    const stats = document.getElementById("stats");
+    stats.innerHTML = `
+        <h2>Movie Statistics</h2>
+        <p>Total Movies: ${movies.length}</p>
+        <p>Average Rating: ${averageRating}</p>
+    `;
 }
