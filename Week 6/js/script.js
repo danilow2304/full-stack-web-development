@@ -84,3 +84,19 @@ function filterByGenre() {
 
     displayMovies(filteredMovies);
 }
+
+function filterByYear() {
+    const yearInput = prompt("Enter a year to filter by (e.g., 1994, 2003):");
+    if (!yearInput) {
+        alert('No year entered. Please try again.');
+        return;
+    }
+    const filteredMovies = movies.filter((movie) => movie.year === parseInt(yearInput));
+
+    displayMovies(filteredMovies);
+}
+
+function filterByRating() {
+    const filteredRatedMovies = movies.filter((movie) => movie.rating >= 8);
+    displayMovies(filteredRatedMovies);
+}
