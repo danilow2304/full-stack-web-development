@@ -82,18 +82,14 @@ function sortAlphabetically() {
 //filter by genre
 function filterByGenre() {
     const genreInput = prompt("Enter a genre to filter by (e.g., Action, Drama, Animation):");
-
     if (!genreInput) {
         alert('No genre entered. Please try again.');
         return;
     }
-
     const search = genreInput.trim().toLowerCase();
-
     const filteredMovies = movies.filter(
         (movie) => movie.genre.toLowerCase() === search
     );
-
     displayMovies(filteredMovies);
 }
 //filter by year
