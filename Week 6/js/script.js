@@ -132,3 +132,5 @@ function movieStats() {
         <p>Average Rating: ${averageRating}</p>
     `;
 }
+
+showAllMovies(); // Display all movies on page load
