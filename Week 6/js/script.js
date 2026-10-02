@@ -40,6 +40,12 @@ const movies = [
         genre: "Animation",
         year: 2003,
         rating: 8.1
+    },
+    {
+        title: "Dragon Ball Z: Broly - The Legendary Super Saiyan",
+        genre: "Animation",
+        year: 1993,
+        rating: 7.4
     }
 ];
 
